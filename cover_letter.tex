@@ -1,0 +1,100 @@
+% LaTeX Cover letter
+% ------------------------
+% Author: Stephen Paul Ierodiaconou, 2011
+
+\documentclass[10pt]{article}
+% Depends on:
+\usepackage{ifthen}
+\usepackage{geometry}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{setspace}
+
+% Optionally remove page numbers:
+\thispagestyle{empty}\pagestyle{empty}
+
+% Configure margins:
+\geometry{top=2.5cm,bottom=2.5cm,left=3.0cm,right=3.0cm}
+% Set spacing:
+% No indent and increased paragraph spacing
+\setlength{\parindent}{0pt}
+\addtolength{\parskip}{0.7\baselineskip}
+
+% Commands
+% - \lettertitle{Name}{ColorForName}{LiteralsOrRightText}{SpaceBelow} - Creates the CV title
+\newcommand{\lettertitle}[4] {%
+	\noindent{\LARGE\color{#2}\textsc{#1}}\hspace{\stretch{3}}{\large \textbf{#3}}\\[#4]}
+
+% - \positionedbox{Side}{Width}{TextContent} - Creates a box aligned left of given width
+\newcommand{\positionedbox}[3]{%
+	\begin{minipage}{#2}
+		\begin{flush#1}
+			#3
+		\end{flush#1}
+	\end{minipage}}
+
+% - \information{pieceofinfo}{pic/rightpic/space/none}{character} - Displays a piece of information pre/post-fixed with a 'character' symbol (pic), or leading space (space) or nothing (none).
+% characters: phone = \Telefon, letter = \Letter, email = \MVAt, URL = \Flatsteel, twitter = $\mathcal{T}$
+% NOTE: at the moment if you specify 'none' for the type, you still should put a non breaking space for 'character'
+\newcommand{\information}[3]{
+		\ifthenelse{\equal{#2}{pic}}
+			{#3~ }
+			{\ifthenelse{\equal{#2}{space}}
+				{~ ~ }
+				{}
+			}
+		#1\ifthenelse{\equal{#2}{rightpic}}
+			{~ #3}
+			{}
+		}
+
+% \cvheaderseperator{a}{b}{c}: Creates a horizontal rule separator where 'a' is the thickness, 'b' is the spacing above and 'c' is the spacing below.
+\newcommand{\letterheaderseperator}[3]{\\[#2]\rule{\linewidth}{#1}\\[#3]}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 					Content					  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\lettertitle{Satrap Rathore}{BrickRed}{CSE,B.Tech}{1.0cm}
+\positionedbox{left}{0.3\textwidth}{%
+	\information{108,J.C Bose Hall of Residence (Hall-2),}{pic}{\Letter}\\
+	\information{Durgapur}{space}{~ }\\
+	\information{713209}{space}{~ }\\
+	%\information{City}{space}{~ }\\
+	\information{India}{space}{~ }\\
+}
+\positionedbox{right}{0.7\textwidth}{
+	\information{+91-9143227223,+91-9051035048}{rightpic}{\Telefon}\\%
+	\information{satraprathore@gmail.com}{rightpic}{\MVAt}\\% 
+	\information{~ }{space}{~ }\\
+	\information{https://www.quora.com/profile/Satrap-Rathore}{rightpic}{\Flatsteel}\\%
+	\information{http://github.com/etotientz}{rightpic}{\Flatsteel}\\%
+	}
+\letterheaderseperator{0.3mm}{0.5cm}{0.1cm}
+
+% Date to the right, you can pull this up with a \vspace{-1.1cm} if you want
+\begin{flushright}\today\end{flushright}
+
+Dear PersonAtCompany,
+
+% some extra space
+\vspace{0.5cm}
+
+% 1.2 line spacing here on
+\begin{spacing}{1.2}
+
+
+\setlength{\parindent}{10ex}
+I am Satrap Rathore,a third year student in the department of Computer Science and Engineering,NIT Durgapur.\par
+\setlength{\parindent}{10ex}
+Currently pursuing a course on Artificial Intelligence and Algorithm Design,I find my research interest to be in these vast and dynamic subjects.As a starter,I have taken up various courses on Machine Learning by Andrew Ng on Coursera,edX,programming in python using PIP.I have undertaken a department project "“Stoppage Pattern Analysis of Public Bus GPS Traces in Developing Regions” under Dr. Subrata Nandi,NIT DGP where I have to implement and design algorithms for identification of bus stops in semi-urban/rural areas using machine learning.I feel that the academic environment suits me well and some research work as a part of your team would help me fully utilize my theoretical knowledge into practical application and also serve as a strong platform for my career.\par
+   \setlength{\parindent}{10ex}     I would be grateful if I could work under your guidance during the summer breakwhere in I would be able to put 6-8 weeks of my dedicated work and contribute my personal best in the process.I have attached a link to my resume with this mail.I would be glad if you could spare some time from your schedule for the evaluation of my credentials.
+\end{spacing}
+% Sign off
+Yours sincerely,\\
+\hfill \\Satrap Rathore
+
+
+\end{document}
