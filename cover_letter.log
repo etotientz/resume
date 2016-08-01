@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.16)  21 FEB 2016 22:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.16)  11 MAR 2016 15:16
 entering extended mode
 **C:/Users/SatrapRathore/Desktop/resume/cover_letter.tex
 (C:/Users/SatrapRathore/Desktop/resume/cover_letter.tex
@@ -207,12 +207,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--76
 
  []
 
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
 
 Underfull \hbox (badness 10000) in paragraph at lines 96--98
 
@@ -229,14 +223,14 @@ Here is how much of TeX's memory you used:
  5913 multiletter control sequences out of 15000+200000
  5907 words of font info for 22 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 23i,5n,19p,858b,181s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 23i,5n,19p,612b,181s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/SatrapRathore/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/SatrapRathore/AppData/Local/
 Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Satrap
 Rathore/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
 pfb><C:/Users/SatrapRathore/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
 c/marvosym/marvosym.pfb>
-Output written on cover_letter.pdf (1 page, 51181 bytes).
+Output written on cover_letter.pdf (1 page, 49757 bytes).
 PDF statistics:
  22 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
